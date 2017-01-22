@@ -1,58 +1,17 @@
-# ieee-report-template
+# Report for Advanced Statistical Modeling
 
-Latex template for IEEE Conference (Paper Plaza)
+## Paper
 
-based on http://ras.papercept.net/conferences/support/tex.php
-
-[![Build Status](https://travis-ci.org/furushchev/ieee-report-template.svg)](https://travis-ci.org/furushchev/ieee-report-template)
-
-### 1. Prerequisities
-
-```bash
-# only for ubuntu 12.04
-$ sudo apt-add-repository ppa:texlive-backports/ppa
-$ sudo apt-get update
+```
+@incollection{choy_nips16,
+  title = {Universal Correspondence Network},
+  author = {Choy, Christopher B and Gwak, JunYoung and Savarese, Silvio and Chandraker, Manmohan},
+  booktitle = {Advances in Neural Information Processing Systems 29},
+  year = {2016},
+}
 ```
 
-### 2. Edit LaTeX files
+## Related Works
 
-### 3. Make pdf
-
-```bash
-$ make
-```
-
-### 4. Release pdf
-
-- Install [Travis Command Line Tool](https://github.com/travis-ci/travis.rb#installation)
-- Enable Travis
-
-  ```bash
-  travis enable
-  travis setup releases --force
-```
-
-- After `travis` command, configuration like below will be appended to `.travis.yml`.
-
-  ```yaml
-deploy:
-  provider: releases
-  api_key: "GITHUB OAUTH TOKEN"
-  file: main.pdf
-  skip_cleanup: true
-  on:
-    tags: true
-```
-
-**NOTE** Please make sure you have `skip_cleanup` and `on: tags` is `true`
-
-
-- Push your tag by `git push --tags`. Then you can watch pdf in github releases.
-
-### Optional. cleaning
-
-```bash
-$ make clean
-# or
-$ make wipe
-```
+- Learning Dense 3D Correspondence, 2007, http://papers.nips.cc/paper/2957-learning-dense-3d-correspondence.pdf
+- Learning Dense Correspondence via 3D-guided Cycle Consistency, 2016, https://arxiv.org/pdf/1604.05383v1.pdf
