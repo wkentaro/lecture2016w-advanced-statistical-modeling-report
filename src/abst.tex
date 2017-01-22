@@ -1,3 +1,19 @@
+\section{論文の要約}
 
-This electronic document is a latex template. The various components of your paper [title, text, heads, etc.] are already defined on the style sheet, as illustrated by the portions given in this document.
+この論文では，複数の二次元画像におけるピクセルごと密なマッチングを行うというタスクに関して
+Universal Correspondence Network (UCN)と呼ばれる新しいニューラルネットワークモデルを提案し，
+物体の部分的な形や見た目などにおいて高精度に位置的および意味的な整合性を取れることを
+KIITIやPASCAL，CUB-2011などのデータセットにおいて既存手法との比較により示している．
 
+既存の研究が画像のパッチにおける類似性を学習しているのに対して，
+この研究ではマッチングを行う二枚の画像を入力としそのピクセルごとの距離を予測できるような
+指標を獲得するように学習しており，密なマッチングにおけるこのような指標獲得のために，
+一致性におけるロス，学習時におけるネガティブサンプリングおよび
+位置変換畳み込みネットワークを提案している．
+一致性におけるロスは負のサンプルに関しては特徴空間での距離がある値以上となるように
+設計しており，ネガティブサンプリングではその閾値の元で特に誤りの多いものだけを
+ロスとしてサンプリングするということ(Hard Negative Mining)によって学習を高速化している．
+位置変換畳込みネットワーク(Convolutional Spatial Transformer Network)
+は画像のパッチでの正規化を行うためのものであり，
+実験においてこのネットワークのある場合とない場合のネットワークの両方において精度を比較し，
+大規模データセットにおいてその有効性を示している．
