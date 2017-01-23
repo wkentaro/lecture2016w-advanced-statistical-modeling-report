@@ -1,0 +1,20 @@
+\section{既存研究との違い}
+
+論文の手法をUCNとして\tabref{difference_previous}のような表で既存研究との違いを示す．
+UCNは学習中に一致性に関する距離の測定方法を学習するため，意味的な一致性と位置的な一致性の
+両方において学習が可能であり，最終的な精度においても既存の研究を上回っている．
+
+\begin{table}[htbp]
+  \centering
+  \caption{既存研究との違い}
+  \label{table:difference_previous}
+  \begin{tabular}{c|c|c|c|c}
+    手法 & 密性 & 位置的な一致性 & 意味的な一致性 & 学習可能性 \\ \hline
+    SIFT \cite{SIFT} & $\times$ & $\circ$  & $\times$ & $\times$ \\
+    DAISY \cite{DAISY} & $\circ$  & $\circ$  & $\times$ & $\times$ \\
+    Conv4 \cite{Conv4} & $\circ$  & $\times$ & $\circ$  & $\circ$  \\
+    DeepMatching \cite{DeepMatching} & $\circ$  & $\circ$  & $\times$ & $\times$ \\
+    PatchCNN \cite{PatchCNN} & $\circ$  & $\circ$  & $\times$ & $\circ$ \\
+    UCN \cite{choy_nips16} & $\circ$  & $\circ$  & $\circ$  & $\circ$
+  \end{tabular}
+\end{table}
